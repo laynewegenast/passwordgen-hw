@@ -35,10 +35,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//function to generate password
 function generatePassword() {
-  var passwordLength = parseInt (prompt('Please eneter a valid password length'));
+  var passwordLength = parseInt (prompt('Please eneter desired password length between 8 and 128 characters'));
   if ( passwordLength < 8 || passwordLength > 128 || isNaN (passwordLength)) {
-    return 'Please eneter password length between 8 and 128 characters'
+    return 'Please eneter a valid password length between 8 and 128 characters'
   }
 
   var acceptUpperCase = confirm('Would you like uppercase characters in your password?');
@@ -73,12 +74,12 @@ function generatePassword() {
        if(acceptSymbol && i < passwordLength-1){
          var sym = randomSymbol()
          i++
-         password+=sym
+         password +=sym
        }
      
 
   };
-  
+
 return password;
 
 }
