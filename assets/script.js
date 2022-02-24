@@ -1,4 +1,4 @@
-// Assignment code here
+// character option functions
 function lowerCaseLetter() {
   const lowercase = 'abcdefjhijklmnopqrstuvwxyz';
   return lowercase[Math.floor(Math.random() * lowercase.length)];
@@ -55,11 +55,6 @@ function generatePassword() {
   var password = ""
   var i = 0
   while(i < passwordLength){
-    i++
-    console.log(i)
-    console.log(randomNumber())
-    console.log(lowerCaseLetter())
-    console.log(upperCaseLetter())
        if(acceptNumber){
          var num =randomNumber()
          password += num
@@ -82,8 +77,8 @@ function generatePassword() {
        }
      
 
-  }
-console.log("Generate",password);
+  };
+  
 return password;
 
 }
