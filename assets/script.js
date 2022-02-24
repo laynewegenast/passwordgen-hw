@@ -44,4 +44,16 @@ function generatePassword() {
   if ( passwordLength < 8 || passwordLength > 128 || isNaN (passwordLength)) {
     return 'Please eneter password length between 8 and 128 characters'
   }
+
+  var acceptUpperCase = confirm('Would you like uppercase characters in your password?');
+  
+  var acceptLowerCase = confirm('Would you like lowercase characters in your password?');
+
+  var acceptSymbol = confirm('would you like to include symbols in your password?');
+
+  var acceptNumber = confirm('Would you like to include numbers in your password?');
+  if (!acceptUpperCase && !acceptLowerCase && !acceptSymbol && !acceptNumber) {
+    return 'Please select at least one option!'
+  }
+
 }
