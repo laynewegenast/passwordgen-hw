@@ -20,10 +20,6 @@ function randomSymbol () {
   return symbol[Math.floor(Math.random() * symbol.length)];
 }
 
-function passwordLength(min,max) {
-  Math.floor(Math.random() * 128) + 8;
-  }
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -55,5 +51,39 @@ function generatePassword() {
   if (!acceptUpperCase && !acceptLowerCase && !acceptSymbol && !acceptNumber) {
     return 'Please select at least one option!'
   }
+
+  var password = ""
+  var i = 0
+  while(i < passwordLength){
+    i++
+    console.log(i)
+    console.log(randomNumber())
+    console.log(lowerCaseLetter())
+    console.log(upperCaseLetter())
+       if(acceptNumber){
+         var num =randomNumber()
+         password += num
+         i++
+       }
+       if(acceptLowerCase && i < passwordLength-1){
+         var low = lowerCaseLetter()
+         i++
+         password += low
+       }
+       if(acceptUpperCase && i < passwordLength-1){
+         var upper = upperCaseLetter()
+         i++
+         password += upper
+       }
+       if(acceptSymbol && i < passwordLength-1){
+         var sym = randomSymbol()
+         i++
+         password+=sym
+       }
+     
+
+  }
+console.log("Generate",password);
+return password;
 
 }
