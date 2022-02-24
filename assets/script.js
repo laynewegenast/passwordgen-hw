@@ -60,22 +60,22 @@ function generatePassword() {
          var num =randomNumber()
          password += num
          i++
-       }
-       if(acceptLowerCase && i < passwordLength-1){
+       };
+       if(acceptLowerCase){
          var low = lowerCaseLetter()
          i++
          password += low
-       }
-       if(acceptUpperCase && i < passwordLength-1){
+       };
+       if(acceptUpperCase){
          var upper = upperCaseLetter()
          i++
          password += upper
-       }
-       if(acceptSymbol && i < passwordLength-1){
+       };
+       if(acceptSymbol){
          var sym = randomSymbol()
          i++
          password +=sym
-       }
+       };
      
 
   };
